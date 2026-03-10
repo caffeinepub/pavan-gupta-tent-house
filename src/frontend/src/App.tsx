@@ -36,7 +36,7 @@ const SERVICES = [
     id: "garden",
     icon: <Trees className="w-7 h-7" />,
     title: "Marriage Garden",
-    desc: "Sprawling, landscaped garden venue with lush greenery, floral archways, and ambient lighting perfect for all wedding ceremonies.",
+    desc: "Two stunning garden venues — Ganesh Mandapam and Binda Marriage House — with lush greenery, floral archways, and ambient lighting perfect for all wedding ceremonies.",
   },
   {
     id: "tent",
@@ -294,7 +294,7 @@ function AppContent() {
           >
             <div className="ornamental-divider mb-6 max-w-xs mx-auto">
               <span className="text-gold text-xs tracking-[0.3em] uppercase font-medium">
-                Chhatarpur, Madhya Pradesh
+                Lavkushnagar, Chhatarpur, Madhya Pradesh
               </span>
             </div>
           </motion.div>
@@ -760,7 +760,7 @@ function AppContent() {
                       </p>
                       <p className="text-muted-foreground text-sm mt-1">
                         {businessInfo?.address ||
-                          "Chhatarpur, Madhya Pradesh, India"}
+                          "Lavkushnagar, Chhatarpur, Madhya Pradesh, India"}
                       </p>
                     </div>
                   </div>
@@ -770,8 +770,14 @@ function AppContent() {
                     </div>
                     <div>
                       <p className="font-semibold text-maroon text-sm">Phone</p>
-                      <p className="text-muted-foreground text-sm mt-1">
-                        {businessInfo?.phone || "+91 94XXX XXXXX"}
+                      <p className="text-sm mt-1">
+                        <a
+                          href="tel:+918103206091"
+                          data-ocid="contact.link"
+                          className="text-maroon font-semibold hover:underline underline-offset-2 transition-colors hover:text-maroon/80"
+                        >
+                          {businessInfo?.phone || "+91 81032 06091"}
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -828,8 +834,8 @@ function AppContent() {
               </span>
             </div>
             <p className="text-cream/60 text-sm">
-              Chhatarpur, Madhya Pradesh — Making your celebrations
-              extraordinary.
+              Lavkushnagar, Chhatarpur, Madhya Pradesh — Making your
+              celebrations extraordinary.
             </p>
           </div>
           <div className="border-t border-gold/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
