@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Variable.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm Indian wedding palette - cream/ivory light theme */
+    --background: 0.975 0.008 80;
+    --foreground: 0.18 0.04 30;
+
+    --card: 0.97 0.012 70;
+    --card-foreground: 0.18 0.04 30;
+
+    --popover: 0.97 0.012 70;
+    --popover-foreground: 0.18 0.04 30;
+
+    /* Deep maroon/crimson primary */
+    --primary: 0.38 0.16 15;
+    --primary-foreground: 0.97 0.01 80;
+
+    /* Gold accent */
+    --secondary: 0.75 0.12 75;
+    --secondary-foreground: 0.18 0.04 30;
+
+    --muted: 0.93 0.015 70;
+    --muted-foreground: 0.45 0.03 40;
+
+    /* Gold accent */
+    --accent: 0.78 0.14 75;
+    --accent-foreground: 0.18 0.04 30;
+
+    --destructive: 0.45 0.2 25;
+    --destructive-foreground: 0.97 0.01 80;
+
+    --border: 0.88 0.025 65;
+    --input: 0.88 0.025 65;
+    --ring: 0.38 0.16 15;
+
+    --radius: 0.5rem;
+
+    --chart-1: 0.55 0.18 20;
+    --chart-2: 0.65 0.14 65;
+    --chart-3: 0.48 0.12 200;
+    --chart-4: 0.72 0.12 130;
+    --chart-5: 0.6 0.15 45;
+
+    --sidebar: 0.97 0.012 70;
+    --sidebar-foreground: 0.18 0.04 30;
+    --sidebar-primary: 0.38 0.16 15;
+    --sidebar-primary-foreground: 0.97 0.01 80;
+    --sidebar-accent: 0.93 0.015 70;
+    --sidebar-accent-foreground: 0.18 0.04 30;
+    --sidebar-border: 0.88 0.025 65;
+    --sidebar-ring: 0.38 0.16 15;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "General Sans", sans-serif;
+    scroll-behavior: smooth;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.82 0.14 75),
+      oklch(0.68 0.16 60),
+      oklch(0.82 0.14 75)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .maroon-gold-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.32 0.14 15) 0%,
+      oklch(0.42 0.18 20) 50%,
+      oklch(0.32 0.14 15) 100%
+    );
+  }
+
+  .ornamental-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .ornamental-divider::before,
+  .ornamental-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      oklch(0.72 0.14 70),
+      transparent
+    );
+  }
+}
